@@ -8,29 +8,47 @@
   <packaging>jar</packaging>
   <name>kafka-connect-plugins</name>
 
+  <properties>
+    <version.kafka>3.5.0</version.kafka>
+    <version.junit>3.8.1</version.junit>
+    <version.checkstyle>10.12.0</version.checkstyle>
+  </properties>
+
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.kafka/connect-api -->
+    <dependency>
+        <groupId>org.apache.kafka</groupId>
+        <artifactId>connect-api</artifactId>
+        <version>${version.kafka}</version>
+        <scope>provided</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.kafka/connect-transforms -->
+    <dependency>
+        <groupId>org.apache.kafka</groupId>
+        <artifactId>connect-transforms</artifactId>
+        <version>${version.kafka}</version>
+        <scope>provided</scope>
+    </dependency>
     <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>${version.junit}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
 
   <build>
-
     <plugins>
       <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-checkstyle-plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.3.0</version>
         <dependencies>
           <dependency>
             <groupId>com.puppycrawl.tools</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>10.12.0</version>
+            <version>${version.checkstyle}</version>
           </dependency>
         </dependencies>
         <configuration>
