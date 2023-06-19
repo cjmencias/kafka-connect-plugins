@@ -9,8 +9,11 @@
   <name>kafka-connect-plugins</name>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <version.kafka>3.5.0</version.kafka>
     <version.junit>3.8.1</version.junit>
+    <version.mvn.checkstyle>3.3.0</version.mvn.checkstyle>
     <version.checkstyle>10.12.0</version.checkstyle>
   </properties>
 
@@ -44,6 +47,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>${version.mvn.checkstyle}</version>
         <dependencies>
           <dependency>
             <groupId>com.puppycrawl.tools</groupId>
