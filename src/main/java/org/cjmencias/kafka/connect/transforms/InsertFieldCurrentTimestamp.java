@@ -23,6 +23,8 @@ import org.apache.kafka.connect.transforms.util.SimpleConfig;
  * It is useful when you need to capture the time at which the record is processed, 
  * such as when Sink connectors consume a record. It can be used to provides information about 
  * the delay between the time the record is produced and when it is consumed.
+ *
+ * @author cjmencias
  */
 public class InsertFieldCurrentTimestamp<R extends ConnectRecord<R>> implements Transformation<R> {
 
