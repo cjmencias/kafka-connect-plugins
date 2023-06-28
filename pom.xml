@@ -6,7 +6,32 @@
   <artifactId>kafka-connect-plugins</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
+
   <name>kafka-connect-plugins</name>
+  <description>A collection of Simple Message Transformation (SMT) for Apache Kafka Connect</description>
+  <url>https://github.com/cjmencias/kafka-connect-plugins</url>
+
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>cjmencias</id>
+      <name>Christian Jacob Mencias</name>
+      <organization>cjmencias</organization>
+      <organizationUrl>https://github.com/cjmencias</organizationUrl>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>git@github.com:cjmencias/kafka-connect-plugins.git</connection>
+    <developerConnection>git@github.com:cjmencias/kafka-connect-plugins.git</developerConnection>
+    <url>https://github.com/cjmencias/kafka-connect-plugins/tree/main</url>
+  </scm>
 
   <properties>
     <java.version>11</java.version>
