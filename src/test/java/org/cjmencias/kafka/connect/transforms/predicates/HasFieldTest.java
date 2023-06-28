@@ -22,17 +22,17 @@ import org.junit.Test;
  *
  * @author cjmencias
  */
-public class HasFieldKeyTest {
+public class HasFieldTest {
 
     @Test(expected = ConfigException.class)
     public void testConfigFieldRequired() {
-        HasFieldKey<SourceRecord> predicate = new HasFieldKey<>();
+        HasField<SourceRecord> predicate = new HasField<>();
         new SimpleConfig(predicate.config(), new HashMap<>());
     }
 
     @Test
     public void testConfig() {
-        HasFieldKey<SourceRecord> predicate = new HasFieldKey<>();
+        HasField<SourceRecord> predicate = new HasField<>();
         predicate.config().validate(Collections.singletonMap("field", "value"));
 
         List<ConfigValue> configs = predicate.config()
@@ -45,7 +45,7 @@ public class HasFieldKeyTest {
 
     @Test
     public void testTombstone() {
-        HasFieldKey<SourceRecord> predicate = new HasFieldKey<>();
+        HasField<SourceRecord> predicate = new HasField<>();
         predicate.configure(Collections.singletonMap("field", "after"));
 
         SourceRecord record = new SourceRecord(null, null, null, null, null);
@@ -54,7 +54,7 @@ public class HasFieldKeyTest {
 
     @Test
     public void testSchemaless() {
-        HasFieldKey<SourceRecord> predicate = new HasFieldKey<>();
+        HasField<SourceRecord> predicate = new HasField<>();
         predicate.configure(Collections.singletonMap("field", "after"));
 
         // missing
@@ -69,7 +69,7 @@ public class HasFieldKeyTest {
 
     @Test
     public void testWithSchema() {
-        HasFieldKey<SourceRecord> predicate = new HasFieldKey<>();
+        HasField<SourceRecord> predicate = new HasField<>();
         predicate.configure(Collections.singletonMap("field", "after"));
 
         // missing

@@ -10,11 +10,11 @@ import org.apache.kafka.connect.transforms.predicates.Predicate;
 import org.apache.kafka.connect.transforms.util.SimpleConfig;
 
 /**
- * This predicate checks whether a field key exists within the payload value.
+ * This predicate checks whether a field exists within the payload value.
  *
  * @author cjmencias
  */
-public class HasFieldKey<R extends ConnectRecord<R>> implements Predicate<R> {
+public class HasField<R extends ConnectRecord<R>> implements Predicate<R> {
 
     private static final String CONFIG_FIELD = "field";
 
