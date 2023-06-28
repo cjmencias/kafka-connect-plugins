@@ -19,3 +19,14 @@ This transformation inserts the current system timestamp into the header. It is 
 "transforms.insertHeaderTs.header": "laststreamdate"
 ```
 
+## Predicates
+
+### HasFieldKey
+
+This predicate checks whether a field key exists within the payload value.
+
+```json
+"predicates": "hasFieldKeyAfter",
+"predicates.hasFieldKeyAfter.type": "org.cjmencias.kafka.connect.transforms.predicates.HasFieldKey",
+"predicates.hasFieldKeyAfter.field": "after"
+```
